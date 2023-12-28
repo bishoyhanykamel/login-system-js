@@ -1,5 +1,6 @@
 // constants
 var USERS_KEY = 'usersData';
+var USER_NAME_KEY = 'userName';
 var EMAIL_REGEX = /^[\w-\.]+@([\w-])+\.com$/;
 
 // global vars
@@ -30,7 +31,7 @@ $('#submitBtn').click(() => {
                 return;
             }
             // user found - correct email and pw
-            localStorage.setItem('userIndex', i);
+            localStorage.setItem(USER_NAME_KEY, user.name);
             return window.location.replace('homepage.html');
         }
     }
