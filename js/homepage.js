@@ -2,7 +2,6 @@ var USERS_KEY = 'usersData';
 var USER_NAME_KEY = 'userName';
 
 var userName = '';
-
 (() => {
     userName = localStorage.getItem(USER_NAME_KEY);
     if (userName === null) {
@@ -10,5 +9,6 @@ var userName = '';
         window.location.replace('index.html');
         return;
     }
+    $('#userHomePage').removeClass('d-none').addClass('d-block');
     $('#userNameSpan').text(userName);
 })()

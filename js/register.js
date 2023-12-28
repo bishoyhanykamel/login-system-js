@@ -10,7 +10,7 @@ var usersFromLocalStorage = [];
     var _loadedUsers = localStorage.getItem(USERS_KEY);
     if (_loadedUsers === null)
         return [];
-    usersFromLocalStorage = JSON.parse(_users);
+    usersFromLocalStorage = JSON.parse(_loadedUsers);
 })()
 
 $('#submitBtn').click(() => {
