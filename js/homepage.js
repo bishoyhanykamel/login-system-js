@@ -12,3 +12,9 @@ var userName = '';
     $('#userHomePage').removeClass('d-none').addClass('d-block');
     $('#userNameSpan').text(userName);
 })()
+
+
+$('#logoutBtn').click(() => {
+    localStorage.removeItem(USER_NAME_KEY);
+    window.location.replace('index.html');
+});
