@@ -23,6 +23,9 @@ $('#submitBtn').click(() => {
     if (!EMAIL_REGEX.test(userEmail))
         return alert('Invalid email') // TODO: modal component
 
+    if (usersFromLocalStorage === null)
+        return alert('No users found');
+
     for (var i = 0; i < usersFromLocalStorage.length; i++) {
         var user=usersFromLocalStorage[i];
         if (user.email === userEmail) {
